@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ExemploCRUD</string>
+    <string name="inicio">App Acadêmico</string>
+    <string name="codigo">Código</string>
+    <string name="nome">Nome</string>
+    <string name="titulacao">Titulação</string>
+    <string name="professor">Professor</string>
+    <string name="inserir">Inserir</string>
+    <string name="modificar">Modificar</string>
+    <string name="excluir">Excluir</string>
+    <string name="buscar">Buscar</string>
+    <string name="listar">Listar</string>
+    <string name="disciplina">Disciplina</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
