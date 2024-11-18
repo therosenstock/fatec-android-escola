@@ -42,10 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void carregaFragment(Bundle bundle) {
         String tipo = bundle.getString("tipo");
-        if(tipo.equals("professor")){
-            fragment = new ProfessorFragment();
-        } else {
+        if(tipo.equals("disciplina")){
             fragment = new DisciplinaFragment();
+
+        } else {
+            fragment = new ProfessorFragment();
+
         }
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -67,18 +69,17 @@ public class MainActivity extends AppCompatActivity {
 
         if(id == R.id.item_professor){
             bundle.putString("tipo", "professor");
-            System.out.println("Prof teste");
             intent.putExtras(bundle);
             this.startActivity(intent);
             this.finish();
             return true;
-        } else{
+        } if(id == R.id.item_disciplina){
             bundle.putString("tipo", "disciplina");
-            System.out.println("disc teste");
             intent.putExtras(bundle);
             this.startActivity(intent);
             this.finish();
             return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 }

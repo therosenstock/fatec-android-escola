@@ -37,6 +37,7 @@ public class ProfessorDao implements IProfessorDao, ICRUDDao<Professor>{
     @Override
     public void insert(Professor professor) throws SQLException {
         ContentValues contentValues = getContentValues(professor);
+        db.insert("professor", null, contentValues);
     }
 
     public static ContentValues getContentValues(Professor professor){

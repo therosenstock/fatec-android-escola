@@ -13,7 +13,7 @@ public class GenericDao extends SQLiteOpenHelper {
             "CREATE TABLE professor(" +
                     "codigo int not null PRIMARY KEY," +
                     "nome VARCHAR(100) NOT NULL," +
-                    "titulacao VARCHAR(50) INT NOT NULL);";
+                    "titulacao VARCHAR(50) NOT NULL);";
     private static final String CREATE_TABLE_DISC =
             "CREATE TABLE disciplina(" +
                     "codigo int not null PRIMARY KEY," +

@@ -39,6 +39,7 @@ public class DisciplinaDao implements IDisciplinaDao, ICRUDDao<Disciplina> {
     @Override
     public void insert(Disciplina disciplina) throws SQLException {
         ContentValues contentValues = getContentValues(disciplina);
+        db.insert("disciplina", null, contentValues);
     }
 
     public static ContentValues getContentValues(Disciplina disciplina){
@@ -65,9 +66,9 @@ public class DisciplinaDao implements IDisciplinaDao, ICRUDDao<Disciplina> {
     @SuppressLint("Range")
     @Override
     public Disciplina findOne(Disciplina disciplina) throws SQLException {
-        String sql = "SELECT p.codigo as cod_prof, p.nome as nome_prof, p.titulacao as tit_prof," +
-                "d.codigo, d.nome FROM professor p, disciplina d " +
-                "WHERE p.codigo = d.cod_prof" +
+        String sql = "SELECT p.codigo as cod_prof, p.nome as nome_prof, p.titulacao as tit_prof, " +
+                "d.codigo as codigo, d.nome as nome FROM professor p, disciplina d " +
+                "WHERE p.codigo = d.codigo_professor " +
                 "AND d.codigo =  " + disciplina.getCodigo();
 
         Cursor cursor = db.rawQuery(sql, null);
@@ -93,9 +94,9 @@ public class DisciplinaDao implements IDisciplinaDao, ICRUDDao<Disciplina> {
     @Override
     public List<Disciplina> findAll() throws SQLException {
         List<Disciplina> disciplinas = new ArrayList<>();
-        String sql = "SELECT p.codigo as cod_prof, p.nome as nome_prof, p.titulacao as tit_prof," +
-                "d.codigo, d.nome FROM professor p, disciplina d " +
-                "WHERE p.codigo = d.cod_prof" ;
+        String sql = "SELECT p.codigo as cod_prof, p.nome as nome_prof, p.titulacao as tit_prof, " +
+                "d.codigo as codigo, d.nome as nome FROM professor p, disciplina d " +
+                "WHERE p.codigo = d.codigo_professor" ;
         Cursor cursor = db.rawQuery(sql, null);
         if(cursor != null){
             cursor.moveToFirst();

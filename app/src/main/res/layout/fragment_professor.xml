@@ -8,7 +8,7 @@
     tools:context=".ProfessorFragment">
 
     <EditText
-        android:id="@+id/etCodigoProd"
+        android:id="@+id/etCodigoProf"
         android:layout_width="243dp"
         android:layout_height="52dp"
         android:layout_marginStart="34dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTituloProf" />
 
     <Button
-        android:id="@+id/btnBuscar"
+        android:id="@+id/btnBuscarProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
@@ -45,8 +45,8 @@
         app:layout_constraintBottom_toTopOf="@+id/etTitulacaoProf"
         app:layout_constraintEnd_toEndOf="@+id/etTitulacaoProf"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etCodigoProd"
-        app:layout_constraintTop_toBottomOf="@+id/etCodigoProd"
+        app:layout_constraintStart_toStartOf="@+id/etCodigoProf"
+        app:layout_constraintTop_toBottomOf="@+id/etCodigoProf"
         app:layout_constraintVertical_bias="0.3" />
 
     <EditText
@@ -61,15 +61,15 @@
         android:ems="10"
         android:hint="@string/titulacao"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/btnExcluir"
+        app:layout_constraintBottom_toBottomOf="@+id/btnExcluirProf"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etCodigoProd"
+        app:layout_constraintTop_toTopOf="@+id/etCodigoProf"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnInserir"
+        android:id="@+id/btnInserirProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
@@ -79,34 +79,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnModificar"
+        android:id="@+id/btnModificarProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginBottom="98dp"
         android:text="@string/modificar"
+        app:layout_constraintBottom_toTopOf="@+id/tvListarProf"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTitulacaoProf" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnExcluir"
+        android:id="@+id/btnExcluirProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="7dp"
         android:text="@string/excluir"
-        app:layout_constraintStart_toStartOf="@+id/btnInserir"
-        app:layout_constraintTop_toBottomOf="@+id/btnInserir" />
+        app:layout_constraintStart_toStartOf="@+id/btnInserirProf"
+        app:layout_constraintTop_toBottomOf="@+id/btnInserirProf" />
 
     <Button
-        android:id="@+id/btnListar"
+        android:id="@+id/btnListarProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="9dp"
         android:text="@string/listar"
-        app:layout_constraintEnd_toEndOf="@+id/btnModificar"
-        app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
+        app:layout_constraintEnd_toEndOf="@+id/btnModificarProf"
+        app:layout_constraintTop_toBottomOf="@+id/btnModificarProf" />
 
     <TextView
         android:id="@+id/tvTituloProf"
@@ -117,6 +119,19 @@
         android:text="@string/professor"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/btnBuscar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarProf"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvListarProf"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="86dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnModificarProf" />
 </androidx.constraintlayout.widget.ConstraintLayout>
